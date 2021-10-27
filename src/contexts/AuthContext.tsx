@@ -23,7 +23,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
     const [user, setUser] = useState<User>();
 
-    // assim que o component App() for exibiido em tela vai executar esse código que vai no Firebase e vai monitorar se já existia um login desse usuário, se sim ele busca as infos e preenche o estado
+    // assim que o component AuthContextProvider() for exibiido em tela vai executar esse código que vai no Firebase e vai monitorar se já existia um login desse usuário, se sim ele busca as infos e preenche o estado
       useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => { //eventListener
           if(user) {
