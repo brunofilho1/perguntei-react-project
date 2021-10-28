@@ -2,10 +2,14 @@ import {ButtonHTMLAttributes} from 'react'; // tipagem que declara todos atribut
 
 import '../styles/button.scss';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>; //as propriedades do botão são todas do ButtonHTMLAttributes, passando apenas o elemento global do botão
-
-export function Button(props: ButtonProps) {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    isOutlined?: boolean;
+}; 
+                                    // rest operator
+export function Button({isOutlined = false, ...props}: ButtonProps) {
     return (
-        <button className="button" {...props} />
+        <button className={`button ${isOutlined ? 'outlined' : ''}`} 
+        {...props} 
+        />
     )
 }
