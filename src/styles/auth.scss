@@ -1,3 +1,5 @@
+@import 'custom_colors.scss';
+
 #page-auth {
     display: flex;
     align-items: stretch;
@@ -5,7 +7,7 @@
 
     aside {
         flex: 7;
-        background: #835afd;
+        background: $custom-blue;
         color: #fff;
 
         display: flex;
@@ -84,7 +86,7 @@
             margin-top: 16px;
 
             a {
-                color: #e559f9;
+                color: $custom-blue;
             }
         }
     }

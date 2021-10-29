@@ -2,6 +2,7 @@ import {Link, useHistory} from 'react-router-dom'
 import { FormEvent, useState } from 'react';
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImage from '../assets/images/logo.svg';
+import pergunteiLogo from '../assets/images/perguntei-logo.png'
 
 import { Button } from '../components/Button';
 
@@ -29,7 +30,7 @@ export function NewRoom() {
             authorId: user?.id,
         })
                             // id/chave do registro criado no firebase
-        history.push(`/rooms/${firebaseRoom.key}`)
+        history.push(`/admin/rooms/${firebaseRoom.key}`)
         
     }
 
@@ -43,7 +44,7 @@ export function NewRoom() {
 
             <main>
                 <div className="main-content">
-                    <img src={logoImage} alt="Letmeask" />
+                    <img width="" height="40" src={pergunteiLogo} alt="Perguntei?" />
                     <h2>Criar uma nova sala</h2>
                     <form onSubmit={handleCreateRoom}>
                         <input 

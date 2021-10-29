@@ -1,3 +1,5 @@
+@import 'custom_colors.scss';
+
 #page-room {
     header {
         padding: 24px;
@@ -43,7 +45,7 @@
 
             span {
                 margin-left: 16px;
-                background: #e559f9;
+                background: $custom-blue-dark;
                 border-radius: 100px;
                 padding: 8px 16px;
                 color: #fff;
@@ -98,7 +100,7 @@
                     button {
                         background: transparent;
                         border: 0;
-                        color: #835AFD;
+                        color: $custom-blue;
                         text-decoration: underline;
                         font-size: 14px;
                         font-weight: 500;

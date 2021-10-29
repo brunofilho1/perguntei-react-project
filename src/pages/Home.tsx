@@ -5,6 +5,7 @@ import { auth, database, firebase } from '../services/firebase'
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImage from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
+import pergunteiLogo from '../assets/images/perguntei-logo.png';
 
 import { Button } from '../components/Button';
 
@@ -37,12 +38,12 @@ export function Home() {
         const roomRef = await database.ref(`/rooms/${roomCode}`).get() // o get() busca todos os registros dessa sala / todos os dados
             // caso não exista...
         if(!roomRef.exists()) {
-            alert('Room does not exists.');
+            alert('Essa sala não existe!.');
             return;
         }
 
         if(roomRef.val().endedAt) {
-            alert('Room already closed')
+            alert('Essa sala já foi fechada.')
             return;
         }
 
@@ -53,13 +54,13 @@ export function Home() {
         <div id="page-auth">
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
-                <strong>Crie salas de Q&amp;A ao-vivo</strong>
-                <p>Tire as dúvidas da sua audiência em tempo-real</p>
+                <strong>Crie salas de perguntas e respostas em tempo real!</strong>
+                <p>Interaja com a sua audiência ao vivo.</p>
             </aside>
 
             <main>
                 <div className="main-content">
-                    <img src={logoImage} alt="Letmeask" />
+                    <img width="" height="55" src={pergunteiLogo} alt="Perguntei?" />
                     <button onClick={handleCreateRoom} className="create-room">
                         <img src={googleIconImg} alt="Logo do Google" />
                         Crie sua sala com o Google

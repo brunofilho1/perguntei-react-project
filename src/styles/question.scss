@@ -1,3 +1,5 @@
+@import 'custom_colors.scss';
+
 .question {
     background: #fefefe;
     border-radius: 8px;
@@ -10,8 +12,8 @@
     }
 
     &.highlighted {
-        background: #f4f0ff;
-        border: 1px solid #835afd;
+        background: #f0f5ff;
+        border: 1px solid $custom-blue;
 
         footer .user-info span {
             color: #29292e;
@@ -20,6 +22,7 @@
 
     &.answered {
         background: #dbdcdd;
+        opacity: .5;
     }
 
     p {
@@ -43,7 +46,7 @@
             }
 
             span {
-                margin-left: 8px;
+                margin-left: 0px;
                 color: #737380;
                 font-size: 14px;
             }
@@ -51,7 +54,7 @@
 
         > div {
             display: flex;
-            gap: 16px;
+            gap: 10px;
         }
 
         button {
@@ -67,10 +70,10 @@
                 gap: 8px;
 
                 &.liked {
-                    color: #835afd;
+                    color: $custom-blue;
 
                     svg path {
-                        stroke: #835afd;
+                        stroke: $custom-blue;
                     }
                 }
             }

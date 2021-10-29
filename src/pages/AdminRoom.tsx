@@ -1,5 +1,5 @@
 import { useHistory, useParams } from 'react-router-dom'
-
+import pergunteiLogo from '../assets/images/perguntei-logo.png'
 import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg';
@@ -56,7 +56,7 @@ export function AdminRoom() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img width="" height="40" src={pergunteiLogo} alt="Perguntei?" />
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
@@ -85,12 +85,14 @@ export function AdminRoom() {
                     <button
                       type="button"
                       onClick={() => handleCheckQuestionAsAnswered(question.id)}
+                      title="Marcar como já respondida"
                     >
                       <img src={checkImg} alt="Remover pergunta" />
                     </button>
                     <button
                       type="button"
                       onClick={() => handleHighlightQuestion(question.id)}
+                      title="Marcar como pergunta sendo respondida no momento"
                     >
                       <img src={answerImg} alt="Marcar pergunta como respondida" />
                     </button>
@@ -99,6 +101,7 @@ export function AdminRoom() {
                 <button
                   type="button"
                   onClick={() => handleDeleteQuestion(question.id)}
+                  title="Deletar pergunta"
                 >
                   <img src={deleteImg} alt="Dar destaque à pergunta" />
                 </button>
