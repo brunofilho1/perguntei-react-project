@@ -1,25 +1,38 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import pergunteiLogo from '../assets/images/perguntei-logo.png'
-import logoImg from '../assets/images/logo.svg'
+
 import { Button } from '../components/Button'
 import { Question } from '../components/Question';
 import { RoomCode } from '../components/RoomCode';
+import { Footer } from '../components/Footer';
+
 import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
+
 import { database } from '../services/firebase';
+
 import '../styles/room.scss';
+import { Toaster } from 'react-hot-toast';
 
 type RoomPrams = {
     id: string;
 }
 
 export function Room() {
-    const { user } = useAuth();
+    const { user, signInWithGoogle } = useAuth();
     const params = useParams<RoomPrams>(); // generic - parãmetro pra tipagem
     const [newQuestion, setNewQuestion] = useState('');
     const roomId = params.id;
     const {title, questions} = useRoom(roomId);
+
+    async function loginWithGoogle() {
+        if(!user) {
+            await signInWithGoogle();
+        }
+
+        /* history.push('/rooms/new'); */
+    }
     
     async function handleSendQuestion(event: FormEvent) {
         event.preventDefault();
@@ -58,9 +71,12 @@ export function Room() {
 
     return (
         <div id="page-room">
+            <Toaster
+              position="top-center"
+              reverseOrder={false}/>
             <header>
                 <div className="content">
-                    <img width="" height="40" src={pergunteiLogo} alt="Perguntei?" />
+                <Link to="/"><img width="" height="40" src={pergunteiLogo} alt="Perguntei?" /></Link>
                     <RoomCode code={roomId} />
                 </div>
             </header>
@@ -85,13 +101,22 @@ export function Room() {
                                 <span>{user.name}</span>
                             </div>
                         ) : (
-                            <span>Para enviar uma pergunta, <button>faça seu login</button>.</span>
+                            <span>Para enviar uma pergunta, <button onClick={loginWithGoogle}>faça seu login</button>.</span>
                         )}
                         <Button type="submit" disabled={!user}>Enviar pergunta</Button>
                     </div>
+                    <div className="color-label">
+                        <div className="being-answered">
+                            <div></div>
+                            Sendo respondida
+                        </div>
+                        <div className="already-answered">
+                            <div></div>
+                            Já respondida
+                        </div>
+                    </div>
                 </form>
-
-                <div className="question-list">
+                    <div className="question-list">
                     {questions.map(question => {
                         return (
                             <Question
@@ -118,8 +143,8 @@ export function Room() {
                         );
                     })}
                 </div>
-                
             </main>
+            <Footer />
         </div>
     )
 }

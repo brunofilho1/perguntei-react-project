@@ -13,7 +13,7 @@
 
     &.highlighted {
         background: #f0f5ff;
-        border: 1px solid $custom-blue;
+        border: 3px solid $custom-blue;
 
         footer .user-info span {
             color: #29292e;
@@ -27,6 +27,7 @@
 
     p {
         color: #29292e;
+        word-wrap: break-word;
     }
 
     footer {

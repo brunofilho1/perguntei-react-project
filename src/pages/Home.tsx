@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom'
 import { auth, database, firebase } from '../services/firebase'
 
 import illustrationImg from '../assets/images/illustration.svg'
-import logoImage from '../assets/images/logo.svg';
+
 import googleIconImg from '../assets/images/google-icon.svg';
 import pergunteiLogo from '../assets/images/perguntei-logo.png';
 
@@ -12,6 +12,7 @@ import { Button } from '../components/Button';
 import '../styles/auth.scss'
 import { useAuth } from '../hooks/useAuth';
 import { FormEvent, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 export function Home() {
@@ -38,12 +39,18 @@ export function Home() {
         const roomRef = await database.ref(`/rooms/${roomCode}`).get() // o get() busca todos os registros dessa sala / todos os dados
             // caso não exista...
         if(!roomRef.exists()) {
-            alert('Essa sala não existe!.');
+            toast.error("Essa sala não existe!")
+            toast(
+                "Entre com um código válido.",
+                {
+                  duration: 5000,
+                }
+              );
             return;
         }
 
         if(roomRef.val().endedAt) {
-            alert('Essa sala já foi fechada.')
+            toast('Essa sala já foi encerrada... 🙁');
             return;
         }
 
@@ -51,7 +58,11 @@ export function Home() {
     }
 
     return (
+
         <div id="page-auth">
+            <Toaster
+              position="top-center"
+              reverseOrder={true}/>
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de perguntas e respostas em tempo real!</strong>

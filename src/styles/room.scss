@@ -1,6 +1,8 @@
 @import 'custom_colors.scss';
 
 #page-room {
+
+
     header {
         padding: 24px;
         border-bottom: 1px solid #e2e2e2;
@@ -29,6 +31,7 @@
     }
 
     main {
+        
         max-width: 800px;
         margin: 0 auto;
 
@@ -109,10 +112,40 @@
                     }
                 }
             }
+
+            .color-label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30px;
+                gap: 16px;
+                font-family: 'Poppins', sans-serif;
+
+                .being-answered > div {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: $custom-blue;
+                }
+                .already-answered > div {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: $custom-grey;
+                }
+
+                .being-answered, .already-answered {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
         }
 
         .question-list {
             margin-top: 32px;
+            margin-bottom: 32px;
         }
     }
+
 }

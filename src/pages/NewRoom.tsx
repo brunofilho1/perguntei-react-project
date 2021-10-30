@@ -9,6 +9,7 @@ import { Button } from '../components/Button';
 import '../styles/auth.scss'
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
+import toast, { Toaster } from 'react-hot-toast';
 
 export function NewRoom() {
     const { user } = useAuth();
@@ -19,6 +20,7 @@ export function NewRoom() {
         event.preventDefault();
                 //remover espaços
         if(newRoom.trim() === '') {
+            toast.error("Insira o nome da sala.")
             return;
         }
 
@@ -29,13 +31,17 @@ export function NewRoom() {
             title: newRoom,
             authorId: user?.id,
         })
+
+        toast.success('Sala criada com sucesso.')
                             // id/chave do registro criado no firebase
         history.push(`/admin/rooms/${firebaseRoom.key}`)
-        
     }
 
     return (
         <div id="page-auth">
+            <Toaster
+              position="top-center"
+              reverseOrder={false}/>
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
