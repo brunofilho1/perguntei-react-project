@@ -3,9 +3,13 @@
 .footer-container {
     max-width: 1120px;
     margin: 0 auto;
+
 }
 
 .page-footer {
+
+    position: relative;
+    bottom: 0;
 
     border-top: 1px solid $custom-grey;
 

@@ -9,11 +9,11 @@ export function Footer() {
             <footer className="page-footer">
                 <div className="footer-content logo">
                     <img width="" height="40" src={pergunteiLogo} alt="Perguntei?" />
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt enim sed itaque explicabo fugiat doloribus cupiditate laboriosam quisquam molestias a ipsam officiis.</p>
+                    <p>Perguntei é uma plataforma de salas online para criação de perguntas em tempo real, ideal pra você interagir com o seu público ao vivo.</p>
                 </div>
                 <div className="footer-content resources">
                     <h1>Recursos</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt enim sed itaque explicabo fugiat doloribus cupiditate laboriosam quisquam molestias a ipsam officiis.</p>
+                    <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated doc... <a target="_blank" href="https://opensource.org/licenses/MIT">Saiba mais</a></p>
                 </div>
                 <div className="footer-content icons">
                     <h1>Contato</h1>
