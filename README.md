@@ -41,7 +41,7 @@ Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
 $ git clone https://github.com/brunofilho1/perguntei-react-project
-$ cd nlw-06-reactjs
+$ cd perguntei-react-project
 ```
 ## 🚀 Como iniciar a aplicação
 
