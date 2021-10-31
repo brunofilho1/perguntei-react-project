@@ -56,6 +56,9 @@ O app estará disponível no seu browser pelo http://localhost:3000 assim que in
 
 Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/), depois criar um projeto para disponibilizar um Realtime Database e configurar as variáveis locais do .env.
 
+## 🌐 Live preview
+<a target="_blank" href="https://letmeask-c89f9.web.app/">Veja o site online clicando aqui.</a>
+
 ## 📝 Licença MIT
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
