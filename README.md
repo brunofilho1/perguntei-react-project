@@ -29,6 +29,7 @@ o código de entrada. E só será aceito perguntas de pessoas autenticadas com a
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
+- [SCSS](https://sass-lang.com/)
 - [Firebase](https://firebase.google.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
