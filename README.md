@@ -38,7 +38,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/brunofilho1/nlw-06-reactjs
+$ git clone https://github.com/brunofilho1/perguntei-react-project
 $ cd nlw-06-reactjs
 ```
 ## 🚀 Como iniciar a aplicação
