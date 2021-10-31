@@ -61,6 +61,6 @@ Lembrando que será necessário criar uma conta no [Firebase](https://firebase.g
 
 ## 📝 Licença MIT
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
