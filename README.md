@@ -52,7 +52,7 @@ $ yarn start
 ```
 O app estará disponível no seu browser pelo http://localhost:3000 assim que iniciado.
 
-Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/), depois criar um projeto para disponibilizar um Realtime Database e configurar as rules.
+Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/), depois criar um projeto para disponibilizar um Realtime Database e configurar as variáveis locais do .env.
 
 ## 📝 Licença MIT
 
