@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Perguntei Logo" width="160px" src="./src/assets/images/perguntei-logo.png" />
+  <a target="_blank" href="https://letmeask-c89f9.web.app/"><img alt="Perguntei Logo" width="160px" src="./src/assets/images/perguntei-logo.png" /></a>
 </div>
 
 <h1 align="center">
@@ -11,6 +11,8 @@
 
 <strong>Perguntei</strong> é uma plataforma para você criar salas de Q&A com o seu próprio público, de uma forma muito organizada, só tendo acesso a sua sala quem tiver 
 o código de entrada. E só será aceito perguntas de pessoas autenticadas com a conta Google.
+
+Por enquanto só está disponível a versão desktop sem responsividade pra mobile.
 
 <br>
 
