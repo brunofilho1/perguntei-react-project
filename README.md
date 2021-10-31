@@ -35,7 +35,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Firebase](https://firebase.google.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## 📎 Clone a aplicação
+## 🔗  Clone a aplicação
 
 Clone o projeto e acesse a pasta do mesmo.
 
